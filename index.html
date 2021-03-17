@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Köböző?</title>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Farönk térfogat számláló</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<div style="padding-left:16px">
+    <br>
+    <h3>Farönk térfogat számláló</h3>
+    <br><br>
+    <select size="1" name="ronkok" id="ronkok">
+        <option value="0">Huber</option>
+    </select>
+    <br><br>
+
+    <label for="atmero">Középső átmérő(cm)</label>
+    <input type="number" id="atmero" name="atmero"><br><br>
+    <label for="hosszusag">Hosszúság(cm)(1m=100cm)</label>
+    <input type="number" id="hosszusag" name="hosszusag"><br><br>
+    <label for="mennyiseg">Mennyiség(db)</label>
+    <input type="number" id="mennyiseg" name="mennyiseg"><br>
+    <h3>Ha nem írsz be mennyiséget az eredmény 0 lesz!</h3>
+    <br>
+    <button onclick="myFunction()">Számol</button>
+
+    <p id="eredmeny"></p>
+
+</div>
+<script>
+    
+    function myFunction() {
+        let a = document.getElementById("atmero").value;
+        let h = document.getElementById("hosszusag").value;
+        let m = document.getElementById("mennyiseg").value;
+        document.getElementById("eredmeny").innerHTML = (Math.PI*((a/2)**2)*h)*m + " cm³";
+    }
+
+</script>
+
+</body>
+</html>
